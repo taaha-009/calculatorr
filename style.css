@@ -8,8 +8,8 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient( 185deg, pink
-    rgb(246, 145, 162), rgb(254, 121, 143));
+    background: linear-gradient( 185deg, rgb(255, 224, 230),
+    rgb(255, 187, 199));
     margin: 0;
     padding: 15px;
 }
