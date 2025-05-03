@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    /* font-family: ; */
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient( 185deg, pink
+    rgb(246, 145, 162), rgb(254, 121, 143));
+    margin: 0;
+    padding: 15px;
+}
+
+.calculator{
+    width: 320px;
+    background-color: palevioletred;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 10px black;
+    overflow: hidden;
+}
+
+.display{
+    background-color: azure;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    font-size: 2.5em;
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+#previous-operand{
+    font-size: 0.6em;
+    color: cornflowerblue;
+    height: 20px;
+    overflow: hidden;
+}
+
+#current-operand{
+    font-size: 1em;
+    color: deepskyblue;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+
+button{
+    border: none;
+    border-radius: 10px;
+    padding: 20px 0;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: cadetblue;
+    color: white;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover{
+    background-color: cornflowerblue;
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+button.operator{
+    background-color: lemonchiffon;
+}
+
+button.operator:hover{
+    background-color: rgb(255, 245, 158);
+}
+
+button.clear:hover{
+    background-color: rgb(202, 0, 0);
+}
+
+button.equals{
+    background-color: aquamarine;
+    grid-column: span 2;
+}
+
+button.equals:hover{
+    background-color: rgb(73, 220, 171);
+}
+
+@keyframes buttonPress{
+    0%{
+        transform: scale(1);
+        box-shadow: 0 0 0 black;
+    }
+    50%{
+        transform: scale(0.95);
+        box-shadow: 0 0 10px black;
+    }
+    100%{
+        transform: scale(1);
+        box-shadow: 0 0 0 black;
+    }
+}
+
+.button-animate{
+    animation: buttonPress 0.3s ease;
+}
+
+
+@keyframes displayUpdate{
+    0%{
+        opacity: 0.5;
+        transform: translateY(-5px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.displayUpdate{
+    animation: displayUpdate 0.3s ease;
+}
