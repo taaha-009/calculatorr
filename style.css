@@ -16,7 +16,7 @@ body{
 
 .calculator{
     width: 320px;
-    background-color: palevioletred;
+    background-color: #ca8e82;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 10px 10px black;
@@ -40,7 +40,7 @@ body{
 
 #previous-operand{
     font-size: 0.6em;
-    color: cornflowerblue;
+    color: #f2d6ce;
     height: 20px;
     overflow: hidden;
 }
@@ -62,7 +62,7 @@ button{
     padding: 20px 0;
     font-size: 1.2em;
     cursor: pointer;
-    background-color: cadetblue;
+    background-color: #f2d6ce;
     color: white;
     transition: all 0.2s ease;
     position: relative;
@@ -70,7 +70,7 @@ button{
 }
 
 button:hover{
-    background-color: cornflowerblue;
+    background-color: rgb(191, 200, 216);
 }
 
 button:active{
@@ -78,11 +78,11 @@ button:active{
 }
 
 button.operator{
-    background-color: lemonchiffon;
+    background-color: #e5e0d8;
 }
 
 button.operator:hover{
-    background-color: rgb(255, 245, 158);
+    background-color: #725c3f;
 }
 
 button.clear:hover{
@@ -90,12 +90,12 @@ button.clear:hover{
 }
 
 button.equals{
-    background-color: aquamarine;
+    background-color: #d0a77b;
     grid-column: span 2;
 }
 
 button.equals:hover{
-    background-color: rgb(73, 220, 171);
+    background-color: #e5ada8;
 }
 
 @keyframes buttonPress{
@@ -131,4 +131,9 @@ button.equals:hover{
 
 .displayUpdate{
     animation: displayUpdate 0.3s ease;
+}
+
+.clear{
+    background-color: #efe8d8;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
